@@ -1,9 +1,3 @@
-try {
-	window.parent.document.title = "Ryan and Christina's Wedding!";
-} catch (err) {
-	console.log(err);
-}
-
 // create the module and name it weddingApp
 var weddingApp = angular.module('weddingApp', ['ngRoute']);
 
