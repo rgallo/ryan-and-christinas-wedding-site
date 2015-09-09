@@ -1,7 +1,7 @@
 try {
 	window.parent.document.title = "Ryan and Christina's Wedding!";
 } catch (err) {
-	// Ignore error
+	console.log(err);
 }
 
 // create the module and name it weddingApp
