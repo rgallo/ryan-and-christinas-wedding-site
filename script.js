@@ -30,7 +30,18 @@ weddingApp.config(function($routeProvider) {
 });
 
 weddingApp.controller('mainController', function($scope) {
-
+	// Handle spinner logic
+	// http://stackoverflow.com/a/12381623
+	$scope.isViewLoading = false;
+	$scope.$on('$routeChangeStart', function() {
+		$scope.isViewLoading = true;
+	});
+	$scope.$on('$routeChangeSuccess', function() {
+		$scope.isViewLoading = false;
+	});
+	$scope.$on('$routeChangeError', function() {
+		$scope.isViewLoading = false;
+	});
 });
 
 weddingApp.controller('storyController', function($scope) {
