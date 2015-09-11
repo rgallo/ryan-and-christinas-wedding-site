@@ -2,6 +2,14 @@
 	font-size: 1.2em;
 }
 
+.hashtag {
+	font-size: 1.5em;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	font-weight: bold;
+}
+
 /* spinner */
 
 /* Absolute Center CSS Spinner */
