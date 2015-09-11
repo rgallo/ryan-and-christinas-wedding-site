@@ -20,11 +20,11 @@
 		<script src="script.js"></script>
 	</head>
 	<body ng-controller="mainController">
+		<div class="container-fluid">
 
-		<!-- HEADER AND NAVBAR -->
-		<header>
-			<nav class="navbar navbar-default">
-				<div class="container-fluid">
+			<!-- HEADER AND NAVBAR -->
+			<header class="row">
+				<nav class="navbar navbar-default">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
 							<span class="sr-only">Toggle navigation</span>
@@ -44,14 +44,14 @@
 							<li><a href="#gallery"><i class="fa fa-photo"></i> Gallery</a></li>
 						</ul>
 					</div>
-				</div>
-			</nav>
-		</header>
+				</nav>
+			</header>
 
-		<!-- MAIN CONTENT AND INJECTED VIEWS -->
-		<div id="main" class="container-fluid row">
-			<div ng-view></div>
+			<!-- MAIN CONTENT AND INJECTED VIEWS -->
+			<div id="main" class="row">
+				<div ng-view></div>
+			</div>
+
 		</div>
-
 	</body>
 </html>
