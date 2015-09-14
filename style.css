@@ -22,6 +22,12 @@
 	font-size: 1.7em;
 }
 
+.squarecashlogo {
+	background-image: url('https://d3eak51ol1qdx0.cloudfront.net/ember/e26ecd6a455fab4546d26502a24a7a0e584fbcd5/assets/images/sqc-logo-lockup.svg');
+	background-repeat: no-repeat;
+	height: 50px;
+}
+
 /* spinner */
 
 /* Absolute Center CSS Spinner */
