@@ -1,5 +1,5 @@
 // create the module and name it weddingApp
-var weddingApp = angular.module('weddingApp', ['ngRoute']);
+var weddingApp = angular.module('weddingApp', ['ngRoute', 'timer']);
 
 weddingApp.config(function($routeProvider) {
 	$routeProvider
