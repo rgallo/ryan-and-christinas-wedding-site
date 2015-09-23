@@ -65,11 +65,18 @@ weddingApp.controller('galleryController', function($scope, Lightbox) {
 		Lightbox.openModal($scope.images, index);
 	};
 	
-	$scope.images = [
-		{
-			'url': 'https://farm6.staticflickr.com/5830/20552523531_e1efec8d49_k.jpg',
-			'thumbUrl': 'https://farm6.staticflickr.com/5830/20552523531_ef720cd2f1_s.jpg',
-			'caption': 'This image has dimensions 2048x1519 and the img element is scaled to fit inside the window.'
+	$scope.images = (function() {
+		var images = [];
+		for (var x=1; x<= 17; x++) {
+			var ext = "jpg";
+			if (x === 16) {
+				ext = "png";
+			}
+			images.push({
+				'url': '/images/gallery/' + x + '.' + ext,
+				'thumbUrl': '/images/gallery/thumbnails/' + x + '.' + ext
+			});
 		}
-	];
+		return images;
+	})();
 });
