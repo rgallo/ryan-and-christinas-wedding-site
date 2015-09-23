@@ -1,7 +1,7 @@
 // create the module and name it weddingApp
 var weddingApp = angular.module('weddingApp', ['ngRoute', 'timer', 'ui.bootstrap', 'bootstrapLightbox']);
 
-weddingApp.config(function($routeProvider) {
+weddingApp.config(function($routeProvider, $locationProvider) {
 	$routeProvider
 		.when('/story', {
 			templateUrl : 'pages/story.html',

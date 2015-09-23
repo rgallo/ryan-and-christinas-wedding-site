@@ -29,7 +29,7 @@
 }
 
 .squarecashlogo {
-	background-image: url('images/squarecashlogo.svg');
+	background-image: url('/images/squarecashlogo.svg');
 	background-repeat: no-repeat;
 	height: 50px;
 }
