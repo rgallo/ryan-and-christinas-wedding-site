@@ -1,3 +1,7 @@
+.galleryThumbnail {
+	cursor: pointer;
+}
+
 .navbar a {
 	font-size: 1.2em;
 }

@@ -1,12 +1,8 @@
 // create the module and name it weddingApp
-var weddingApp = angular.module('weddingApp', ['ngRoute', 'timer']);
+var weddingApp = angular.module('weddingApp', ['ngRoute', 'timer', 'ui.bootstrap', 'bootstrapLightbox']);
 
 weddingApp.config(function($routeProvider) {
 	$routeProvider
-		.when('/', {
-			templateUrl : 'pages/home.html',
-			controller  : 'mainController'
-		})
 		.when('/story', {
 			templateUrl : 'pages/story.html',
 			controller  : 'storyController'
@@ -25,7 +21,11 @@ weddingApp.config(function($routeProvider) {
 		})
 		.when('/gallery', {
 			templateUrl : 'pages/gallery.html',
-			controller  : 'contactController'
+			controller  : 'galleryController'
+		})
+		.when('/', {
+			templateUrl : 'pages/home.html',
+			controller  : 'mainController'
 		});
 });
 
@@ -60,6 +60,16 @@ weddingApp.controller('registryController', function($scope) {
 
 });
 
-weddingApp.controller('galleryController', function($scope) {
-
+weddingApp.controller('galleryController', function($scope, Lightbox) {
+	$scope.openLightboxModal = function (index) {
+		Lightbox.openModal($scope.images, index);
+	};
+	
+	$scope.images = [
+		{
+			'url': 'https://farm6.staticflickr.com/5830/20552523531_e1efec8d49_k.jpg',
+			'thumbUrl': 'https://farm6.staticflickr.com/5830/20552523531_ef720cd2f1_s.jpg',
+			'caption': 'This image has dimensions 2048x1519 and the img element is scaled to fit inside the window.'
+		}
+	];
 });

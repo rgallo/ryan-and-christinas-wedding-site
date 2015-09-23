@@ -2,5 +2,9 @@
 	<h1>Gallery</h1>
 </div>
 <div class="col-xs-10 col-xs-offset-1">
-	<p class="lead">Coming soon!</p>
+	<div style="col-xs-4 col-sm-2" ng-repeat="image in images">
+		<a ng-click="openLightboxModal($index)">
+			<img ng-src="{{image.thumbUrl}}" class="img-thumbnail galleryThumbnail">
+		</a>
+	</div>
 </div>
