@@ -67,7 +67,7 @@ weddingApp.controller('galleryController', function($scope, Lightbox) {
 	
 	$scope.images = (function() {
 		var images = [];
-		for (var x=1; x<= 17; x++) {
+		for (var x=1; x<=19; x++) {
 			var ext = "jpg";
 			if (x === 16) {
 				ext = "png";
