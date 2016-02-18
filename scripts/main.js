@@ -65,16 +65,20 @@ weddingApp.controller('galleryController', function($scope, Lightbox) {
 		Lightbox.openModal($scope.images, index);
 	};
 	
+	function padToTwoDigits(num) {
+		var output = num.toString();
+		if (num >= 1 && num <= 9) {
+			output = "0" + output;
+		}
+		return output;
+	}
+	
 	$scope.images = (function() {
 		var images = [];
-		for (var x=1; x<=19; x++) {
-			var ext = "jpg";
-			if (x === 16) {
-				ext = "png";
-			}
+		for (var x=1; x<=37; x++) {
 			images.push({
-				'url': '/images/gallery/' + x + '.' + ext,
-				'thumbUrl': '/images/gallery/thumbnails/' + x + '.' + ext
+				'url': '/images/gallery/engagement' + padToTwoDigits(x) + '.jpg',
+				'thumbUrl': '/images/gallery/thumbnails/engagement' + padToTwoDigits(x) + '.jpg'
 			});
 		}
 		return images;
