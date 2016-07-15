@@ -13,7 +13,7 @@ weddingApp.config(function($routeProvider, $locationProvider) {
 		})
 		.when('/weddingparty', {
 			templateUrl : 'pages/weddingparty.html',
-			controller  : 'contactController'
+			controller  : 'weddingPartyController'
 		})
 		.when('/registry', {
 			templateUrl : 'pages/registry.html',
